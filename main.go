@@ -31,6 +31,8 @@ func todo(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	mux := http.NewServeMux
+	fs := http.FileServer(http.Dir("./static"))
+	mux.Hndle("/static/", http.StripPrefix("/static/", fs))
 	mux.HandleFunc("/todo", todo)
 
 	tmpl = template.Must(template.ParseFiles("templates/index.gohtml"))

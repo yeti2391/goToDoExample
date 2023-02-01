@@ -1,3 +1,3 @@
 # goToDoExample
 
-Este es un ejemplo de ToDo list usando mux server y templates.
+Este es un ejemplo de ToDo list usando mux server y templates
